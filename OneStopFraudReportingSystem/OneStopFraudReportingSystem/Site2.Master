@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.Master.cs" Inherits="OneStopFraudReportingSystem.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link href="css/StyleSheet1.css" rel="stylesheet" />
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+        <%--our custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="css/meera.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <style >select {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor; 
+  font-weight: bold;
+  letter-spacing: .15em;
+  border-radius: 0;
+
+
+    
+    
+  
+  
+  }
+
+
+
+.cart1 {
+      
+        
+       
+        background: url("Images/add-to-shopping-cart-e-commerce-button.png")
+        left 3px top 5px no-repeat;
+    }
+
+
+
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top navbar-default " id="header-clr" style="height:75px; ">
+              
+                <div style='background:transparent url("Images/companyLogo.png")'><img src="Images/companyLogo.png" height="70" width="70" style="background:transparent;" />
+                 </div>
+               
+                
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                 <div class="collapse navbar-collapse " id="navbarSupportedContent" style="margin-top:10px;">
+                    <ul class="navbar-nav mr-auto" style="font-size:9pt;">
+                        <li class="nav-item" style="padding-right:35px;">
+                            <a class="nav-link " href="Home.aspx" style="text-align:center; font-family:'Brush Script MT'; font-size:20pt; "><b>OSFRS</b></a>
+                        </li>
+                        <li class="nav-item sep" style="font-size:13pt">
+                            <a class="nav-link" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item sep" style="font-size:13pt">
+                            <a class="nav-link" href="textMessageIdentification.aspx">Message Identification</a>
+                        </li>
+                       
+                        <li class="dropdown">
+                            <asp:LinkButton CssClass="nav-link dropdown-toggle" data-toggle="dropdown" ID="Admin" runat="server">
+                                <asp:Label style="font-size:13pt;" ID="lblAdmin" runat="server" Text="Admin"></asp:Label>
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkViewAdmin" runat="server" Text="Admin Details" OnClick="lnkViewAdmin_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkAddAdmin" runat="server" Text="Admin Registration" OnClick="lnkAddAdmin_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkViewVictim" runat="server" Text="Victim Details" OnClick="lnkViewVictim_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+
+                         <li class="dropdown">
+                            <asp:LinkButton CssClass="nav-link dropdown-toggle" data-toggle="dropdown" ID="announcement" runat="server">
+                                <asp:Label style="font-size:13pt;" ID="lblAnnouncement" runat="server" Text="Announcement"></asp:Label>
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkAddAnnouncement" runat="server" Text="Add Announcement" OnClick="lnkAddAnnouncement_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkAnnouncement" runat="server" Text="View Announcement" OnClick="lnkAnnouncment_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <asp:LinkButton CssClass="nav-link dropdown-toggle" data-toggle="dropdown" ID="department" runat="server">
+                                <asp:Label style="font-size:13pt;" ID="lblDepartment" runat="server" Text="Department"></asp:Label>
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkAddDepartment" runat="server" Text="Add Department In-Charge" OnClick="lnkAddDepartment_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkViewDepartment" runat="server" Text="View Department" OnClick="lnkViewDepartment_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"> 
+                            <asp:LinkButton CssClass="nav-link dropdown-toggle" data-toggle="dropdown" ID="Report" runat="server">
+                                <asp:Label style="font-size:13pt;" ID="lblReport" runat="server" Text="Report"></asp:Label>
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkCasesInCharge" runat="server" Text="Cases In-Charge" OnClick="lnkCasesReport_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+
+                                <li class="dropdown-item" style="background-color:white; font-size:12pt;">
+                                    <asp:LinkButton ID="lnkNewReport" runat="server" Text="New Cases Reporting" OnClick="lnkNewReport_Click" CausesValidation="false"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                     <ul class="nav navbar-nav navbar-right" style="padding-right: 25px; font-size:9pt">
+
+                         <li class="nav-item sep" style="padding-right: 35px; font-size:13pt;">
+                             <asp:LinkButton CssClass="nav-link" ID="lnkDashboard" runat="server" Text="Dashboard" OnClick="lnkDashboard_Click" CausesValidation="false"></asp:LinkButton>
+                         </li>
+
+                         <li class="dropdown">
+                             <asp:LinkButton CssClass="nav-link dropdown-toggle" data-toggle="dropdown" ID="lnkUser" runat="server">
+                                 <asp:Label style="font-size:13pt;" ID="lblHello" runat="server" Text="Label"></asp:Label>
+                             </asp:LinkButton>
+                             <ul class="dropdown-menu">
+                                 <li class="dropdown-item" style="background-color:white;font-size:12pt;">
+                                     <asp:LinkButton ID="lnkProfile" runat="server" Text="Profile" OnClick="lnkProfile_Click" CausesValidation="false"></asp:LinkButton>
+                                 </li>
+                                 <li class="dropdown-item" style="background-color:white;font-size:12pt;">
+                                     <asp:LinkButton ID="lnkSetPassword" runat="server" Text="Set Password" OnClick="lnkSetPassword_Click"></asp:LinkButton>
+                                 </li>
+                                 <li class="dropdown-item" style="background-color:white;font-size:12pt;">
+                                     <asp:LinkButton ID="lnkLogout" runat="server" Text="Logout" OnClick="lnkLogout_Click"></asp:LinkButton>
+                                 </li>
+                             </ul>
+                         </li>
+                     </ul>
+                     
+                       
+
+                    
+                    
+
+                  
+                </div>
+
+
+            </nav>
+
+     
+          <div style="margin-top:100px;padding-left:30px"><asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="Medium" PathSeparator=" : " >
+            <CurrentNodeStyle ForeColor="#333333" />
+            <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+            <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            </asp:SiteMapPath></div>
+        <hr />
+        
+    
+            
+         
+           
+
+            
+            
+        
+
+          <div id="content">
+              <asp:ContentPlaceHolder id="title1" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder id="main1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div id="footer" class="navbar navbar-expand-lg navbar-light navbar-fixed-bottom navbar-default " style="height:60px;">  
+           <footer style="
+width: 100%; 
+
+
+
+
+
+text-align: center; ">
+<div  style=" float: none;
+
+width: inherit; max-width: 820px;
+    margin-left: auto;
+    margin-right: auto; display: block;"
+>
+
+
+  
+    <a style=" color: rgba(0,0,0,.5); font-size: 14pt;margin: 0px;">&copy;Copyright 20223 Scammer Stop System</a>
+
+    
+    
+    
+  
+
+</div>
+</footer>
+        </div>
+
+        
+    </form>
+</body>
+</html>

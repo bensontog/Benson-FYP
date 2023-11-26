@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="Home.aspx" title="Home">
+
+		<siteMapNode url="About.aspx" title="AboutUs"  />
+		<siteMapNode url="textMessageIdentification.aspx" title="Message Identification"  />
+
+
+		<siteMapNode title="Account" url=""  >
+
+
+			<siteMapNode title="User"  >
+				<siteMapNode title="Login" url="loginPending.aspx"  />
+				<siteMapNode title="New User Registration" url="userRegistration.aspx"   />
+				<siteMapNode title="User Dashboard" url="userDashboard.aspx"   />
+				<siteMapNode title="User Profile" url="userProfile.aspx"           />
+				<siteMapNode title="User Set Password" url="userSetPassword.aspx"/>
+				<siteMapNode title="User Update Profile" url="userUpdateProfile.aspx"/>
+				<siteMapNode title="Make New Reporting" url="addReport.aspx"  />
+				<siteMapNode title="View Cases Report" url="casesReportDetails.aspx"  >
+					<siteMapNode title="Cases Report Details" url="reportDetails.aspx"  />
+					<siteMapNode title="View Evidence" url="viewEvidence.aspx"  />
+					
+				</siteMapNode>
+					
+
+			</siteMapNode>
+
+
+			<siteMapNode title="Admin"  >
+				<siteMapNode title="adminRegistration" url="adminRegistration.aspx"  />
+				<siteMapNode title="Admin Profile" url="adminProfile.aspx" >
+					<siteMapNode title="Admin Update Profile" url="adminUpdateProfile.aspx"/>
+					<siteMapNode title="Admin Set Password" url="adminSetPassword.aspx"/>
+				</siteMapNode>
+
+				<siteMapNode title="Promote Admin" url="promoteAdmin.aspx" >
+					<siteMapNode title="Update Admin Position" url="updateAdminPosition.aspx"/>
+				</siteMapNode>
+
+				<siteMapNode title="Admin Dashboard" url="adminDashboard.aspx" />
+				<siteMapNode title="View Admin Details" url="adminDetails.aspx" />
+				<siteMapNode title="Forward Cases Report" url="forwardCasesReport.aspx" >
+					<siteMapNode title="Forward Victim Report " url="forwardReport.aspx" />
+				</siteMapNode>
+
+			</siteMapNode>
+
+			<siteMapNode title="Units In-Charge">
+				<siteMapNode title="Units In-Charge Dashboard" url="unitsInChargeDashboard.aspx"  />
+				<siteMapNode title="Units In-Charge Profile" url="unitsInChargeProfile.aspx" />
+				<siteMapNode title="Units In-Charge Set Password" url="unitsInChargeSetPassword.aspx"/>
+				<siteMapNode title="Units In-Charge Update Profile" url="unitsInChargeUpdateProfile.aspx"/>
+				<siteMapNode title="Update Investigation Progress" url="viewVictimReport.aspx" >
+					<siteMapNode title="Cases Report Details" url="viewCasesEvidence.aspx"/>
+				</siteMapNode>
+			</siteMapNode>
+
+
+		</siteMapNode>
+
+	</siteMapNode>
+</siteMap>
